@@ -20,3 +20,15 @@ echo -c "Setting up Nano...\n"
 echo "set constantshow" >> ~/.nanorc
 echo "set linenumbers" >> ~/.nanorc
 echo "include \"/usr/local/share/nano/*.nanorc\"" >> ~/.nanorc
+
+echo -e "Do you want to install Visual Studio Code? y/n \n"
+read answer
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo -e "Installing Visual Studio Code...\n"
+    brew tap caskroom/cask
+    brew cask search visual-studio-code
+    brew cask install visual-studio-code
+else
+    echo -e "Alright, moving on...\n"
+fi
+

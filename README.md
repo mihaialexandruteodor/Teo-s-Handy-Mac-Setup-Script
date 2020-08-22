@@ -19,4 +19,5 @@ chmod 777 Teo-s-Handy-Mac-Setup-Script.sh
 
 - [x] Install Homebrew
 - [x] Setup Nano line numbers, line counter and code highlighting
+- [x] Install Visual Studio Code
 - [] TO DO
