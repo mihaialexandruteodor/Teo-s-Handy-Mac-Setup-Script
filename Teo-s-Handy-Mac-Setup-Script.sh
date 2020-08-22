@@ -14,3 +14,9 @@ echo "First we'll install Homebrew, the Mac package manager"
 echo -e "You'll need to type in your password below\n"
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+
+echo -c "Setting up Nano...\n"
+echo "set constantshow" >> ~/.nanorc
+echo "set linenumbers" >> ~/.nanorc
+echo "include \"/usr/local/share/nano/*.nanorc\"" >> ~/.nanorc
