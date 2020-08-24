@@ -34,7 +34,7 @@ read answer
 clear
 if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo -e "Installing Visual Studio Code...\n"
-    brew tap caskroom/cask
+    brew tap homebrew/cask
     brew cask install visual-studio-code
 else
     echo -e "Alright, moving on...\n"
