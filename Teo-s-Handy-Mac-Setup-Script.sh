@@ -45,7 +45,7 @@ read answer
 clear
 if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo -e "Installing the latest version of Java...\n"
-    echo -e "You'll need to type in your password below\n"
+    echo -e "You'll need to type in your password a little later\n"
     brew cask install adoptopenjdk
 else
     echo -e "You might have Java already installed, I guess\n"
