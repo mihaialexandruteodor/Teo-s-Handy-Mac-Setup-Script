@@ -11,6 +11,7 @@ echo -e "################################################################\n\n"
 echo -e "I'll guide you all the way, remember that shell execution can be interrupted by pressing Ctrl+Z\n"
 
 echo "First we'll install Homebrew, the Mac package manager"
+echo -e "Note that Xcode Dev Tools will also be installed, which include gcc and are usefull is you want to use CLion or QT Creator to develop C++ apps\n"
 echo -e "You'll need to type in your password below\n"
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -34,7 +35,6 @@ clear
 if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo -e "Installing Visual Studio Code...\n"
     brew tap caskroom/cask
-    brew cask search visual-studio-code
     brew cask install visual-studio-code
 else
     echo -e "Alright, moving on...\n"
@@ -45,7 +45,7 @@ read answer
 clear
 if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo -e "Installing the latest version of Java...\n"
-    brew cask search adoptopenjdk
+    echo -e "You'll need to type in your password below\n"
     brew cask install adoptopenjdk
 else
     echo -e "You might have Java already installed, I guess\n"
@@ -56,7 +56,6 @@ read answer
 clear
 if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo -e "Installing Eclipse IDE...\n"
-    brew cask search eclipse-jee
     brew cask install eclipse-jee
 else
     echo -e "If it's not needed, we're moving on to the next...\n"
@@ -67,7 +66,6 @@ read answer
 clear
 if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo -e "Installing JavaFX Scene Builder...\n"
-    brew cask search scenebuilder
     brew cask install scenebuilder
 else
     echo -e "Skipping this...\n"
@@ -78,24 +76,11 @@ read answer
 clear
 if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo -e "Installing Sublime Text...\n"
-    brew cask search sublime-text
     brew cask install sublime-text
 else
     echo -e "Forget Sublime...\n"
 fi
 
-echo -e "Coming up, Xcode Dev Tools, which include gcc, are usefull is you want to use CLion or QT Creator to develop C++ apps\n"
-echo -e "Now, this will require some GUI interaction. You'll have to click 'Install' on the popup window, 'Agree' on the License Agreement window and 'Done' on the final window\n"
-echo -e "When everything is done, come back to the Terminal\n\n"
-echo -e "So, shall we install Xcode Dev Tools? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing Xcode Dev Tools...\n"
-    xcode-select --install
-else
-    echo -e "Fair enough...\n"
-fi
 
 echo -e "What's programming without a little music?\n\n"
 echo -e "Do you want to install Spotify? y/n \n"
