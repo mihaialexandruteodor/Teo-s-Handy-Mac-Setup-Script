@@ -27,3 +27,6 @@ chmod 777 Teo-s-Handy-Mac-Setup-Script.sh
 - [x] Install JavaFX Scene Builder (optional)
 - [x] Install Sublime Text (optional)
 - [x] Install Spotify (optional)
+- [x] Install VLC (optional)
+- [x] Install SmartGit (optional)
+- [x] Install Transmission (optional)

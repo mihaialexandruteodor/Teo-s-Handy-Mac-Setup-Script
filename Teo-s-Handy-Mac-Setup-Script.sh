@@ -88,10 +88,46 @@ read answer
 clear
 if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo -e "Installing Spotify...\n"
-    brew install caskroom/cask/brew-cask 2> /dev/null
+    brew install homebrew/cask/brew-cask 2> /dev/null
     brew cask install spotify
 else
     echo -e "Music is for tools...\n"
 fi
 
+echo -e "What about VLC?\n\n"
+echo -e "Do you want to install VLC? y/n \n"
+read answer
+clear
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo -e "Installing VLC...\n"
+    brew cask install vlc
+else
+    echo -e "Oki Doki...\n"
+fi
 
+echo -e "SmartGit is a must when using git\n\n"
+echo -e "Do you want to install SmartGit? y/n \n"
+read answer
+clear
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo -e "Installing SmartGit...\n"
+    brew cask install smartgit
+else
+    echo -e "You were born to use command line :D ...\n"
+fi
+
+
+echo -e "Transmission is a usefull Torrent client (Available on Linux and Windows as well)\n\n"
+echo -e "Do you want to install echo -e "Transmission is a usefull Torrent client (Available on Linux and Windows as well)\n\n"
+? y/n \n"
+read answer
+clear
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo -e "Installing Transmission...\n"
+    brew cask install transmission
+else
+    echo -e "No means no...\n"
+fi
+
+
+echo -e "Alright, that should be all for now! Enjoy your new Mac, and if this was usefull, go to https://github.com/mihaialexandruteodor/Teo-s-Handy-Mac-Setup-Script and star this repo ;) \n\n"
