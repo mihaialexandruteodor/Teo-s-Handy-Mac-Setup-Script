@@ -29,6 +29,18 @@ echo -e "Setting up Git... \n"
 brew install git
 clear
 
+echo -e "SmartGit is a must when using git\n\n"
+echo -e "Do you want to install SmartGit? y/n \n"
+read answer
+clear
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo -e "Installing SmartGit...\n"
+    brew cask install smartgit
+else
+    echo -e "You were born to use command line :D ...\n"
+fi
+
+
 echo -e "Do you want to install Visual Studio Code? y/n \n"
 read answer
 clear
@@ -49,6 +61,16 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     brew cask install adoptopenjdk
 else
     echo -e "You might have Java already installed, I guess\n"
+fi
+
+echo -e "Do you want to install Gradle? y/n \n"
+read answer
+clear
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo -e "Installing Gradle...\n"
+    brew install gradle
+else
+    echo -e "No Gradle for you ...\n"
 fi
 
 echo -e "Do you want to install Eclipse IDE? y/n \n"
@@ -104,18 +126,6 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
 else
     echo -e "Oki Doki...\n"
 fi
-
-echo -e "SmartGit is a must when using git\n\n"
-echo -e "Do you want to install SmartGit? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing SmartGit...\n"
-    brew cask install smartgit
-else
-    echo -e "You were born to use command line :D ...\n"
-fi
-
 
 echo -e "Transmission is a usefull Torrent client (Available on Linux and Windows as well)\n\n"
 echo -e "Do you want to install echo -e "Transmission is a usefull Torrent client (Available on Linux and Windows as well)\n\n"
