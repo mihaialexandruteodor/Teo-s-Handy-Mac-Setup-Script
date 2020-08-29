@@ -1,5 +1,11 @@
 # Teo's Handy Mac Setup Script
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Apple_Computer_Logo_rainbow.svg/800px-Apple_Computer_Logo_rainbow.svg.png"
+     alt="Apple Icon"
+     style="float: left; margin-right: 10px;"
+     width="40" height="40" />
+
+
 A shell setup script to quickly get to work on a brand new Mac (I also use it after wiping my drive clean)
 
 ## How to use it:
