@@ -128,8 +128,8 @@ else
 fi
 
 echo -e "Transmission is a usefull Torrent client (Available on Linux and Windows as well)\n\n"
-echo -e "Do you want to install echo -e "Transmission is a usefull Torrent client (Available on Linux and Windows as well)\n\n"
-? y/n \n"
+echo -e "Do you want to install Transmission?\n\n"
+
 read answer
 clear
 if [ "$answer" != "${answer#[Yy]}" ] ;then
@@ -137,6 +137,18 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     brew cask install transmission
 else
     echo -e "No means no...\n"
+fi
+
+clear
+echo -e "Let us welcome our Google overlords!\n\n"
+echo -e "Do you want to install Chrome? y/n \n"
+read answer
+clear
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo -e "Installing Chrome...\n"
+    brew cask install google-chrome
+else
+    echo -e "Begone, Chrome...\n"
 fi
 
 
