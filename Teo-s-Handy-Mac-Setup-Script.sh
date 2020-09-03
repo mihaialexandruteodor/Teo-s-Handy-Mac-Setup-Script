@@ -23,6 +23,9 @@ echo -e "You'll need to type in your password below\n"
 sudo gem install cocoapods
 clear
 
+brew install nano
+clear
+
 echo -e "Setting up Nano...\n"
 echo "set constantshow" >> ~/.nanorc
 clear
