@@ -157,5 +157,14 @@ else
     echo -e "Begone, Chrome...\n"
 fi
 
+echo -e "Do you want to install BitchX? y/n \n"
+read answer
+clear
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo -e "Installing Chrome...\n"
+    brew  install bitchx
+else
+    echo -e "Fine, be a BitchX...\n"
+fi
 
 echo -e "Alright, that should be all for now! Enjoy your new Mac, and if this was usefull, go to https://github.com/mihaialexandruteodor/Teo-s-Handy-Mac-Setup-Script and star this repo ;) \n\n"

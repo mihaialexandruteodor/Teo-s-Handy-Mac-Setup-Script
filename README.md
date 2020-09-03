@@ -41,3 +41,4 @@ chmod 777 Teo-s-Handy-Mac-Setup-Script.sh
 - [x] Install Transmission (optional)
 - [x] Install Chrome (optional)
 - [x] Install Gradle (optional)
+- [x] Install BitchX (optional)
