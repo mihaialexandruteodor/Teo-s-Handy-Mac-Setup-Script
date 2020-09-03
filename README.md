@@ -26,6 +26,7 @@ chmod 777 Teo-s-Handy-Mac-Setup-Script.sh
 ## What this script can do:
 
 - [x] Install Xcode Dev Tools
+- [x] Install Cocoa Pods
 - [x] Install Homebrew
 - [x] Install Git
 - [x] Setup Nano line numbers, line counter and code highlighting

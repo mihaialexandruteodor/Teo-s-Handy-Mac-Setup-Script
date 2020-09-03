@@ -17,6 +17,12 @@ echo -e "You'll need to type in your password below\n"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 
+echo -e "Installing Cocoa Pods\n"
+echo -e "You'll need to type in your password below\n"
+
+sudo gem install cocoapods
+clear
+
 echo -e "Setting up Nano...\n"
 echo "set constantshow" >> ~/.nanorc
 clear
