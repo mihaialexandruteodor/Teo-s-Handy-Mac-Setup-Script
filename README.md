@@ -1,7 +1,5 @@
 # Teo's Handy Mac Setup Script
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=mihaialexandruteodor)](https://github.com/ryo-ma/github-profile-trophy)
-
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Apple_Computer_Logo_rainbow.svg/800px-Apple_Computer_Logo_rainbow.svg.png"
      alt="Apple Icon"
      style="float: left; margin-right: 10px;"
@@ -42,3 +40,8 @@ chmod 777 Teo-s-Handy-Mac-Setup-Script.sh
 - [x] Install Chrome (optional)
 - [x] Install Gradle (optional)
 - [x] Install BitchX (optional)
+
+
+
+
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=mihaialexandruteodor&show_icons=true&theme=tokyonight&hide=stars,issues,prs)  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mihaialexandruteodor&theme=tokyonight)
