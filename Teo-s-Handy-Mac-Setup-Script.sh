@@ -38,6 +38,18 @@ echo -e "Setting up Git... \n"
 brew install git
 clear
 
+echo -e "Setting up Docker and VirtualBox... \n"
+brew install docker
+brew install docker-machine
+brew cask install virtualbox
+docker-machine create --driver virtualbox default
+clear
+
+#docker-machine ls
+#docker-machine start default
+#docker run hello-world
+#docker-machine stop default
+
 echo -e "SmartGit is a must when using git\n\n"
 echo -e "Do you want to install SmartGit? y/n \n"
 read answer
