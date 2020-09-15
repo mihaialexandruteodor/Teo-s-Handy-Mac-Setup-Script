@@ -24,11 +24,8 @@ chmod 777 Teo-s-Handy-Mac-Setup-Script.sh
 ## What this script can do:
 
 - [x] Install Xcode Dev Tools
-- [x] Install Cocoa Pods
 - [x] Install Homebrew
 - [x] Install Git
-- [x] Install Docker
-- [x] Install VirtualBox
 - [x] Setup Nano line numbers, line counter and code highlighting
 - [x] Install Visual Studio Code (optional)
 - [x] Install the latest version of Java (optional)
@@ -41,5 +38,4 @@ chmod 777 Teo-s-Handy-Mac-Setup-Script.sh
 - [x] Install Transmission (optional)
 - [x] Install Chrome (optional)
 - [x] Install Gradle (optional)
-- [x] Install BitchX (optional)
-
+- [x] Install mpich (optional)
