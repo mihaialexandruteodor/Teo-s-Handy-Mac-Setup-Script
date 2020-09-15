@@ -26,6 +26,8 @@ chmod 777 Teo-s-Handy-Mac-Setup-Script.sh
 - [x] Install Xcode Dev Tools
 - [x] Install Homebrew
 - [x] Install Git
+- [x] Install Docker
+- [x] Install VirtualBox
 - [x] Setup Nano line numbers, line counter and code highlighting
 - [x] Install Visual Studio Code (optional)
 - [x] Install the latest version of Java (optional)

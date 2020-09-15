@@ -17,6 +17,15 @@ echo -e "You'll need to type in your password below\n"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 
+echo -e "Installing Cocoa Pods\n"
+echo -e "You'll need to type in your password below\n"
+
+sudo gem install cocoapods
+clear
+
+brew install nano
+clear
+
 echo -e "Setting up Nano...\n"
 echo "set constantshow" >> ~/.nanorc
 clear
@@ -28,6 +37,18 @@ clear
 echo -e "Setting up Git... \n"
 brew install git
 clear
+
+echo -e "Setting up Docker and VirtualBox... \n"
+brew install docker
+brew install docker-machine
+brew cask install virtualbox
+docker-machine create --driver virtualbox default
+clear
+
+#docker-machine ls
+#docker-machine start default
+#docker run hello-world
+#docker-machine stop default
 
 echo -e "SmartGit is a must when using git\n\n"
 echo -e "Do you want to install SmartGit? y/n \n"
@@ -149,6 +170,16 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     brew cask install google-chrome
 else
     echo -e "Begone, Chrome...\n"
+fi
+
+echo -e "Do you want to install BitchX? y/n \n"
+read answer
+clear
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo -e "Installing Chrome...\n"
+    brew  install bitchx
+else
+    echo -e "Fine, be a BitchX...\n"
 fi
 
 clear
