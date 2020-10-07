@@ -73,6 +73,16 @@ else
     echo -e "Alright, moving on...\n"
 fi
 
+echo -e "R? y/n \n"
+read answer
+clear
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo -e "Installing R...\n"
+    brew install r
+else
+    echo -e "Rn't...\n"
+fi
+
 echo -e "Do you want to install the latest version of Java? y/n \n"
 read answer
 clear
