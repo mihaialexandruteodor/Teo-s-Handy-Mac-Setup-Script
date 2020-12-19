@@ -12,7 +12,6 @@ A shell setup script to quickly get to work on a brand new Mac (I also use it af
 
 - Run in termnial:
 ```
-sudo apt install curl
 bash <(curl -s https://raw.githubusercontent.com/mihaialexandruteodor/Teo-s-Handy-Mac-Setup-Script/master/Teo-s-Handy-Mac-Setup-Script.sh)
 ```
 
