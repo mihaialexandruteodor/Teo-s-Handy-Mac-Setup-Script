@@ -15,10 +15,8 @@ A shell setup script to quickly get to work on a brand new Mac (I also use it af
 bash <(curl -s https://raw.githubusercontent.com/mihaialexandruteodor/Teo-s-Handy-Mac-Setup-Script/master/Teo-s-Handy-Mac-Setup-Script.sh)
 ```
 
-
-## What this script installs:
-
-- [x] means optional
+# What this script installs:
+## by default
 
 -  Install Xcode Dev Tools
 -  Install Homebrew
@@ -26,18 +24,21 @@ bash <(curl -s https://raw.githubusercontent.com/mihaialexandruteodor/Teo-s-Hand
 -  Yabai
 -  skhd
 -  setup Nano line numbers, line counter and code highlighting
-- [x] Install Docker
-- [x] Install VirtualBox
-- [x] Install Visual Studio Code 
-- [x] Install R
-- [x] Install the latest version of Java 
-- [x] Install Eclipse IDE 
-- [x] Install JavaFX Scene Builder 
-- [x] Install Sublime Text 
-- [x] Install Spotify 
-- [x] Install VLC 
-- [x] Install SmartGit 
-- [x] Install Transmission 
-- [x] Install Chrome 
-- [x] Install Gradle
-- [x] Install mpich
+
+## optional
+
+- [x] Docker
+- [x] VirtualBox
+- [x] Visual Studio Code 
+- [x] R
+- [x] the latest version of Java 
+- [x] Eclipse IDE 
+- [x] JavaFX Scene Builder 
+- [x] Sublime Text 
+- [x] Spotify 
+- [x] VLC 
+- [x] SmartGit 
+- [x] Transmission 
+- [x] Chrome 
+- [x] Gradle
+- [x] mpich
