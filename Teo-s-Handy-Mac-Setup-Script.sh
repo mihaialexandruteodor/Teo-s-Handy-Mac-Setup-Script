@@ -23,8 +23,12 @@ echo -e "You'll need to type in your password below\n"
 sudo gem install cocoapods
 clear
 
+# Nano
 brew install -y nano
 clear
+
+# ITerm 2
+brew install -y --cask iterm2
 
 echo -e "Setting up Nano...\n"
 echo "set constantshow" >> ~/.nanorc
