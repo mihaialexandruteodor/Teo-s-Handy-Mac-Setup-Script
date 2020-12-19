@@ -10,35 +10,35 @@ A shell setup script to quickly get to work on a brand new Mac (I also use it af
 
 ## How to use it:
 
-- [x] Navigate to the folder conatining the script using Terminal.app
-- [x] Type 
+- Run in termnial:
 ```
-chmod 777 Teo-s-Handy-Mac-Setup-Script.sh
-```
-- [x] Run the script by typing
-```
-./Teo-s-Handy-Mac-Setup-Script.sh
+sudo apt install curl
+bash <(curl -s https://raw.githubusercontent.com/mihaialexandruteodor/Teo-s-Handy-Mac-Setup-Script/master/Teo-s-Handy-Mac-Setup-Script.sh)
 ```
 
 
-## What this script can do:
+## What this script installs:
 
-- [x] Install Xcode Dev Tools
-- [x] Install Homebrew
-- [x] Install Git
+- [x] means optional
+
+-  Install Xcode Dev Tools
+-  Install Homebrew
+-  Install Git
+-  Yabai
+-  skhd
+-  setup Nano line numbers, line counter and code highlighting
 - [x] Install Docker
 - [x] Install VirtualBox
-- [x] Setup Nano line numbers, line counter and code highlighting
-- [x] Install Visual Studio Code (optional)
-- [x] Install R (optional)
-- [x] Install the latest version of Java (optional)
-- [x] Install Eclipse IDE (optional)
-- [x] Install JavaFX Scene Builder (optional)
-- [x] Install Sublime Text (optional)
-- [x] Install Spotify (optional)
-- [x] Install VLC (optional)
-- [x] Install SmartGit (optional)
-- [x] Install Transmission (optional)
-- [x] Install Chrome (optional)
-- [x] Install Gradle (optional)
-- [x] Install mpich (optional)
+- [x] Install Visual Studio Code 
+- [x] Install R
+- [x] Install the latest version of Java 
+- [x] Install Eclipse IDE 
+- [x] Install JavaFX Scene Builder 
+- [x] Install Sublime Text 
+- [x] Install Spotify 
+- [x] Install VLC 
+- [x] Install SmartGit 
+- [x] Install Transmission 
+- [x] Install Chrome 
+- [x] Install Gradle
+- [x] Install mpich
