@@ -23,7 +23,7 @@ echo -e "You'll need to type in your password below\n"
 sudo gem install cocoapods
 clear
 
-brew install nano
+brew install -y nano
 clear
 
 echo -e "Setting up Nano...\n"
@@ -38,169 +38,133 @@ echo -e "Setting up Git... \n"
 brew install git
 clear
 
-echo -e "Setting up Docker and VirtualBox... \n"
-brew install docker
-brew install docker-machine
-brew cask install virtualbox
-docker-machine create --driver virtualbox default
+echo -e "Setting up window tiling manager... \n"
+brew install -y koekeishiya/formulae/yabai
+rm -f "${HOME}"/.{chunkwm,skhd}rc
+git clone https://github.com/mihaialexandruteodor/chunkwm-yabai-config.git "${HOME}"/.config/chunkwm
+ln -s "${HOME}/.config/chunkwm/chunkwm/chunkwmrc" "${HOME}/.chunkwmrc"
+ln -s "${HOME}/.config/chunkwm/chunkwm/skhdrc" "${HOME}/.skhdrc"
 clear
 
-#docker-machine ls
-#docker-machine start default
-#docker run hello-world
-#docker-machine stop default
+allOptions=( Docker VirtualBox VSCode R latest-version-openjdk Eclipse JavaFX-Scene-Builder Sublime-Text Spotify VLC SmartGit Transmission Chrome Gradle mpich)
 
-echo -e "SmartGit is a must when using git\n\n"
-echo -e "Do you want to install SmartGit? y/n \n"
-read answer
+echo "First, tell me what optional apps you want:"
+
+read -n 1 -s -r -p "Press any key to continue"
 clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing SmartGit...\n"
-    brew cask install smartgit
-else
-    echo -e "You were born to use command line :D ...\n"
+
+selectedOptions=()
+
+print_options(){
+   echo "Do you want to install $1 ? Type y or Y for yes, anything else for no"
+   read answer
+    if [ "$answer" != "${answer#[Yy]}" ] ;then
+        selectedOptions+=($1)
+    fi
+    clear
+}
+
+for i in ${!allOptions[@]};
+do
+  opt=${allOptions[$i]}
+  print_options $opt
+done
+
+#Docker
+if [[ " ${selectedOptions[@]} " =~ "Docker" ]]; then
+    brew install -y docker
+    brew install -y docker-machine
+    brew cask install -y virtualbox
+    docker-machine create --driver virtualbox default
+    clear
+fi
+
+#SmartGit
+if [[ " ${selectedOptions[@]} " =~ "SmartGit" ]]; then
+   brew cask install -y smartgit
+   clear
+fi
+
+#VirtualBox
+if [[ " ${selectedOptions[@]} " =~ "VirtualBox" ]]; then
+   
+fi
+
+#VSCode
+if [[ " ${selectedOptions[@]} " =~ "VSCode" ]]; then
+   brew tap homebrew/cask
+   brew cask install -y visual-studio-code
+   clear
+fi
+
+#R
+if [[ " ${selectedOptions[@]} " =~ "R" ]]; then
+   brew install -y r
+   clear
 fi
 
 
-echo -e "Do you want to install Visual Studio Code? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing Visual Studio Code...\n"
-    brew tap homebrew/cask
-    brew cask install visual-studio-code
-else
-    echo -e "Alright, moving on...\n"
+#latest-version-openjdk
+if [[ " ${selectedOptions[@]} " =~ "latest-version-openjdk" ]]; then
+   echo -e "You'll need to type in your password a little later\n"
+   brew cask install -y adoptopenjdk
+   clear
 fi
 
-echo -e "R? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing R...\n"
-    brew install r
-else
-    echo -e "Rn't...\n"
+#Eclipse
+if [[ " ${selectedOptions[@]} " =~ "Eclipse" ]]; then
+   brew cask install -y eclipse-jee
+   clear
 fi
 
-echo -e "Do you want to install the latest version of Java? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing the latest version of Java...\n"
-    echo -e "You'll need to type in your password a little later\n"
-    brew cask install adoptopenjdk
-else
-    echo -e "You might have Java already installed, I guess\n"
+#JavaFX-Scene-Builder
+if [[ " ${selectedOptions[@]} " =~ "JavaFX-Scene-Builder" ]]; then
+   brew cask install -y scenebuilder
+   clear
 fi
 
-echo -e "Do you want to install Gradle? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing Gradle...\n"
-    brew install gradle
-else
-    echo -e "No Gradle for you ...\n"
+#Sublime-Text
+if [[ " ${selectedOptions[@]} " =~ "Sublime-Text" ]]; then
+   brew cask install -y sublime-text
+   clear
 fi
 
-echo -e "Do you want to install Eclipse IDE? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing Eclipse IDE...\n"
-    brew cask install eclipse-jee
-else
-    echo -e "If it's not needed, we're moving on to the next...\n"
+#Spotify
+if [[ " ${selectedOptions[@]} " =~ "Spotify" ]]; then
+   brew install -y homebrew/cask/brew-cask 2> /dev/null
+   brew cask install -y spotify
+   clear
 fi
 
-echo -e "Do you want to JavaFX Scene Builder? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing JavaFX Scene Builder...\n"
-    brew cask install scenebuilder
-else
-    echo -e "Skipping this...\n"
-fi
-
-echo -e "Sublime is an awesome text editor! Wanna try it? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing Sublime Text...\n"
-    brew cask install sublime-text
-else
-    echo -e "Forget Sublime...\n"
+#VLC
+if [[ " ${selectedOptions[@]} " =~ "VLC" ]]; then
+   brew cask install -y vlc
+   clear
 fi
 
 
-echo -e "What's programming without a little music?\n\n"
-echo -e "Do you want to install Spotify? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing Spotify...\n"
-    brew install homebrew/cask/brew-cask 2> /dev/null
-    brew cask install spotify
-else
-    echo -e "Music is for tools...\n"
+#Transmission
+if [[ " ${selectedOptions[@]} " =~ "Transmission" ]]; then
+   brew cask install -y transmission
+   clear
 fi
 
-echo -e "What about VLC?\n\n"
-echo -e "Do you want to install VLC? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing VLC...\n"
-    brew cask install vlc
-else
-    echo -e "Oki Doki...\n"
+#Chrome
+if [[ " ${selectedOptions[@]} " =~ "Chrome" ]]; then
+   brew cask install -y google-chrome
+   clear
 fi
 
-echo -e "Transmission is a usefull Torrent client (Available on Linux and Windows as well)\n\n"
-echo -e "Do you want to install Transmission?\n\n"
-
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing Transmission...\n"
-    brew cask install transmission
-else
-    echo -e "No means no...\n"
+#Gradle
+if [[ " ${selectedOptions[@]} " =~ "Gradle" ]]; then
+   brew install -y gradle
 fi
 
-clear
-echo -e "Let us welcome our Google overlords!\n\n"
-echo -e "Do you want to install Chrome? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing Chrome...\n"
-    brew cask install google-chrome
-else
-    echo -e "Begone, Chrome...\n"
+#mpich
+if [[ " ${selectedOptions[@]} " =~ "mpich" ]]; then
+   brew install -y mpich
+   clear
 fi
 
-echo -e "Do you want to install BitchX? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing Chrome...\n"
-    brew  install bitchx
-else
-    echo -e "Fine, be a BitchX...\n"
-fi
-
-clear
-echo -e "Do you want to install mpich? y/n \n"
-read answer
-clear
-if [ "$answer" != "${answer#[Yy]}" ] ;then
-    echo -e "Installing mpich...\n"
-    brew install mpich
-else
-    echo -e "rm -rf mpich...\n"
-fi
 
 echo -e "Alright, that should be all for now! Enjoy your new Mac, and if this was usefull, go to https://github.com/mihaialexandruteodor/Teo-s-Handy-Mac-Setup-Script and star this repo ;) \n\n"
