@@ -85,26 +85,26 @@ done
 if [[ " ${selectedOptions[@]} " =~ "Docker" ]]; then
     brew install -y docker
     brew install -y docker-machine
-    brew cask install -y virtualbox
+    brew install --cask -y virtualbox
     docker-machine create --driver virtualbox default
     clear
 fi
 
 #SmartGit
 if [[ " ${selectedOptions[@]} " =~ "SmartGit" ]]; then
-   brew cask install -y smartgit
+   brew install --cask -y smartgit
    clear
 fi
 
 #VirtualBox
 if [[ " ${selectedOptions[@]} " =~ "VirtualBox" ]]; then
-   
+   brew install --cask -y virtualbox
 fi
 
 #VSCode
 if [[ " ${selectedOptions[@]} " =~ "VSCode" ]]; then
    brew tap homebrew/cask
-   brew cask install -y visual-studio-code
+   brew install --cask -y visual-studio-code
    clear
 fi
 
@@ -118,45 +118,45 @@ fi
 #latest-version-openjdk
 if [[ " ${selectedOptions[@]} " =~ "latest-version-openjdk" ]]; then
    echo -e "You'll need to type in your password a little later\n"
-   brew cask install -y adoptopenjdk
+   brew install --cask -y adoptopenjdk
    clear
 fi
 
 #Eclipse
 if [[ " ${selectedOptions[@]} " =~ "Eclipse" ]]; then
-   brew cask install -y eclipse-jee
+   brew install --cask -y eclipse-jee
    clear
 fi
 
 #JavaFX-Scene-Builder
 if [[ " ${selectedOptions[@]} " =~ "JavaFX-Scene-Builder" ]]; then
-   brew cask install -y scenebuilder
+   brew install --cask -y scenebuilder
    clear
 fi
 
 #Sublime-Text
 if [[ " ${selectedOptions[@]} " =~ "Sublime-Text" ]]; then
-   brew cask install -y sublime-text
+   brew install --cask -y sublime-text
    clear
 fi
 
 #Spotify
 if [[ " ${selectedOptions[@]} " =~ "Spotify" ]]; then
    brew install -y homebrew/cask/brew-cask 2> /dev/null
-   brew cask install -y spotify
+   brew install --cask -y spotify
    clear
 fi
 
 #VLC
 if [[ " ${selectedOptions[@]} " =~ "VLC" ]]; then
-   brew cask install -y vlc
+   brew install --cask -y vlc
    clear
 fi
 
 
 #Transmission
 if [[ " ${selectedOptions[@]} " =~ "Transmission" ]]; then
-   brew cask install -y transmission
+   brew install --cask -y transmission
    clear
 fi
 
