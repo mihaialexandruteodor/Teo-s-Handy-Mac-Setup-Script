@@ -17,10 +17,10 @@ echo -e "You'll need to type in your password below\n"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 
-echo -e "Installing Cocoa Pods\n"
-echo -e "You'll need to type in your password below\n"
+#echo -e "Installing Cocoa Pods\n"
+#echo -e "You'll need to type in your password below\n"
 
-sudo gem install cocoapods
+#sudo gem install cocoapods
 clear
 
 # Nano
@@ -43,11 +43,18 @@ brew install git
 clear
 
 echo -e "Setting up window tiling manager... \n"
-brew install -y koekeishiya/formulae/yabai
+brew install koekeishiya/formulae/yabai
 rm -f "${HOME}"/.{chunkwm,skhd}rc
 git clone https://github.com/mihaialexandruteodor/chunkwm-yabai-config.git "${HOME}"/.config/chunkwm
 ln -s "${HOME}/.config/chunkwm/chunkwm/chunkwmrc" "${HOME}/.chunkwmrc"
 ln -s "${HOME}/.config/chunkwm/chunkwm/skhdrc" "${HOME}/.skhdrc"
+clear
+
+brew services start yabai
+
+brew install koekeishiya/formulae/skhd
+brew services start skhd
+
 clear
 
 allOptions=( Docker VirtualBox VSCode R latest-version-openjdk Eclipse JavaFX-Scene-Builder Sublime-Text Spotify VLC SmartGit Transmission Chrome Gradle mpich)
