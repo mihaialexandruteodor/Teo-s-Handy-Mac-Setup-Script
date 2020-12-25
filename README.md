@@ -24,7 +24,6 @@ bash <(curl -s https://raw.githubusercontent.com/mihaialexandruteodor/Teo-s-Hand
 -  Yabai
 -  skhd
 -  setup Nano line numbers, line counter and code highlighting
--  Cocoa Pods
 -  ITerm2 terminal
 
 ## optional
